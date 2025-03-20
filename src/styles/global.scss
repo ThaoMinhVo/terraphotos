@@ -24,6 +24,10 @@ a{
   }
 }
 
+h1,h2,h3{
+  margin: 0;
+}
+
 h1{
   color: var.$accent-3-dark;
   font-size: 3rem;
@@ -38,29 +42,38 @@ h2{
   font-weight: 400;
   margin: 0;
 
-  & .dark{
+  &.dark{
     color: var.$accent-3-dark;
   }
 }
 
 .container{
-  width: 100%;
-  max-width: 1440px;
+  box-sizing: border-box;
   display: flex; 
-  padding: 0 1rem;
-
+  max-width: 1440px;
+  padding: 0 3rem;
+  width: 100%;
+  &-full{
+    display: flex; 
+    max-width: 1440px;
+    padding: 0;
+    width: 100%;
+  }
   &-outer{
     display: flex;
     justify-content: center;
+    width: 100%;
   }
+}
+
+.column{
+  align-items: center;
+  flex-direction: column;
 }
 
 // all rules outside of @media queries apply to devices 1201px and above
 @media (max-width: var.$desktop) {
 	// rules here apply to devices from 993px to 1200px (inclusive)
-  .container{
-    padding: 0 2rem;
-  }
 }
 @media (max-width: var.$tablet) {	
 	// rules here apply to devices from 769px to 992px (inclusive)

@@ -4,7 +4,7 @@ import '../styles/homeHero.scss';
 function homeHero() {
   return (
     <div className='container-outer'>
-      <div className='container hero'>
+      <div className='container-full hero'>
         <div className='hero-1' />
         <div className='hero-2' />
         <div className='hero-3'>
