@@ -4,6 +4,8 @@
     &-container{
         align-items: center;
         justify-content: space-between;
+        margin-bottom: 1rem;
+        margin-top: 3rem;
     }
     &-name{
         color: var.$accent-3;
@@ -22,6 +24,9 @@
             color: var.$white;
             background-color: var.$accent-3;
             padding: .5rem 2rem;
+            &:hover{
+                color: var.$accent-3-dark;
+            }
         }
     }
     &-burger{

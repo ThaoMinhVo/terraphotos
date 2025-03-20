@@ -4,6 +4,7 @@ body {
   background-color: var.$base;
   font-family: "Mulish", sans-serif;
   font-optical-sizing: auto;
+  font-size: 1.25rem;
   font-style: normal;
   font-weight: 400;
   margin: 0;
@@ -26,6 +27,7 @@ a{
 h1{
   color: var.$accent-3-dark;
   font-size: 3rem;
+  margin: 0;
 }
 
 h2{
@@ -34,6 +36,7 @@ h2{
   font-size: 3rem;
   font-style: normal;
   font-weight: 400;
+  margin: 0;
 
   & .dark{
     color: var.$accent-3-dark;
@@ -64,4 +67,11 @@ h2{
 }
 @media (max-width: var.$mobile) {
 	// rules here apply to devices from 0px to 768px (inclusive)
+  body {
+    font-size: 1rem;
+  }
+
+  h1{
+    font-size: 2rem;
+  }
 }

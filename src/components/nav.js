@@ -5,7 +5,7 @@ function nav() {
   return (
     <div className='container-outer'>
         <div className='container nav-container'>
-            <p className='nav-name'>terra.photos</p>
+            <a className='nav-name' href="/">terra.photos</a>
             <p className='nav-links-container'>
                 <a className='nav-links' href='#who'>who</a>
                 <a className='nav-links' href='#what'>what</a>
