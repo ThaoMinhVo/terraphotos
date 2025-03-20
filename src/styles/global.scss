@@ -1,4 +1,4 @@
-@use '../styles/_variables.scss' as var;
+@use "../styles/_variables.scss" as var;
 
 body {
   background-color: var.$base;
@@ -11,11 +11,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-  box-sizing: border-box;         /* Opera/IE 8+ */
+  -moz-box-sizing: border-box; /* Firefox, other Gecko */
+  box-sizing: border-box; /* Opera/IE 8+ */
 }
 
-a{
+a {
   color: var.$accent-3-dark;
   text-decoration: none;
 
@@ -24,17 +24,19 @@ a{
   }
 }
 
-h1,h2,h3{
+h1,
+h2,
+h3 {
   margin: 0;
 }
 
-h1{
+h1 {
   color: var.$accent-3-dark;
   font-size: 3rem;
   margin: 0;
 }
 
-h2{
+h2 {
   color: var.$accent-3;
   font-family: "Homemade Apple", cursive;
   font-size: 3rem;
@@ -42,49 +44,53 @@ h2{
   font-weight: 400;
   margin: 0;
 
-  &.dark{
+  &.dark {
     color: var.$accent-3-dark;
   }
 }
 
-.container{
+.container {
   box-sizing: border-box;
-  display: flex; 
+  display: flex;
   max-width: 1440px;
   padding: 0 3rem;
   width: 100%;
-  &-full{
-    display: flex; 
+  &-full {
+    display: flex;
     max-width: 1440px;
     padding: 0;
     width: 100%;
   }
-  &-outer{
+  &-outer {
     display: flex;
     justify-content: center;
     width: 100%;
   }
 }
 
-.column{
+.column {
   align-items: center;
   flex-direction: column;
 }
 
+.between {
+  justify-content: space-between;
+}
+
 // all rules outside of @media queries apply to devices 1201px and above
 @media (max-width: var.$desktop) {
-	// rules here apply to devices from 993px to 1200px (inclusive)
+  // rules here apply to devices from 993px to 1200px (inclusive)
 }
-@media (max-width: var.$tablet) {	
-	// rules here apply to devices from 769px to 992px (inclusive)
+@media (max-width: var.$tablet) {
+  // rules here apply to devices from 769px to 992px (inclusive)
 }
 @media (max-width: var.$mobile) {
-	// rules here apply to devices from 0px to 768px (inclusive)
+  // rules here apply to devices from 0px to 768px (inclusive)
   body {
     font-size: 1rem;
   }
 
-  h1{
+  h1 {
     font-size: 2rem;
   }
 }

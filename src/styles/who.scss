@@ -1,56 +1,56 @@
-@use '../styles/_variables.scss' as var;
+@use "../styles/_variables.scss" as var;
 
-$image1Height: 500px;
+$imageRightHeight: 500px;
 
-.who{
-    & > h2{
+.who {
+    & > h2 {
         margin-top: 6rem;
-        margin-bottom: 2rem;
     }
-    &-content{
+    &-content {
         background-color: var.$accent-1-dark;
-        
-        &-left{
+
+        &-left {
             display: flex;
             flex-direction: column;
             width: 35%;
-            &-copy{
+            &-copy {
                 color: var.$white;
-                padding: 5rem 0;
-                & h3{
-                    font-size: 3.5rem;
+                padding: 3rem 0;
+                & h3 {
+                    font-size: 3rem;
                 }
-                & p{
-                    max-width: 80%
+                & p {
+                    max-width: 80%;
                 }
             }
-            &-image{
-                background-image: url('../../public/assets/prints/me-left.jpg');
-                background-position: center;
+            &-image {
+                background-image: url("../../public/assets/prints/me-left.jpg");
+                background-position: center bottom;
                 background-size: cover;
-                height: 550px;
+                flex: 1;
+                min-height: 550px;
                 width: 100%;
             }
         }
-        &-right{
+        &-right {
             display: flex;
             flex-direction: column;
             width: 65%;
-            &-image{
-                background-image: url('../../public/assets/prints/me-right.jpg');
+            &-image {
+                background-image: url("../../public/assets/prints/me-right.jpg");
                 background-position: center;
                 background-size: cover;
-                height: $image1Height;
+                height: $imageRightHeight;
                 width: 100%;
             }
         }
     }
 }
 
-.facts{
-    &-container{
+.facts {
+    &-container {
         background-color: var.$accent-1;
-        display:flex;
+        display: flex;
         flex-direction: column;
         flex-grow: 1;
         justify-content: center;

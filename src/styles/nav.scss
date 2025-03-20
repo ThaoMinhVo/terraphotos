@@ -1,42 +1,42 @@
-@use '../styles/_variables.scss' as var;
+@use "../styles/_variables.scss" as var;
 
-.nav{
-    &-container{
+.nav {
+    &-container {
         align-items: center;
         justify-content: space-between;
         margin-bottom: 1rem;
         margin-top: 3rem;
     }
-    &-name{
+    &-name {
         color: var.$accent-3;
         font-family: "Homemade Apple", cursive;
         font-size: 2rem;
     }
-    &-links{
+    &-links {
         font-size: 1.25rem;
         margin-left: 2rem;
 
-        &-container{
+        &-container {
             align-items: center;
             display: flex;
         }
-        &-contact{
+        &-contact {
             color: var.$white;
             background-color: var.$accent-3;
-            padding: .5rem 2rem;
-            &:hover{
+            padding: 0.5rem 2rem;
+            &:hover {
                 color: var.$accent-3-dark;
             }
         }
     }
-    &-burger{
+    &-burger {
         display: none;
         flex-direction: column;
         justify-content: space-between;
         height: 30px;
         width: 40px;
 
-        & > div{
+        & > div {
             border-radius: 10px;
             height: 4px;
             width: 40px;
@@ -47,20 +47,20 @@
 
 // all rules outside of @media queries apply to devices 1201px and above
 @media (max-width: var.$desktop) {
-	// rules here apply to devices from 993px to 1200px (inclusive)
+    // rules here apply to devices from 993px to 1200px (inclusive)
 }
-@media (max-width: var.$tablet) {	
-	// rules here apply to devices from 769px to 992px (inclusive)
+@media (max-width: var.$tablet) {
+    // rules here apply to devices from 769px to 992px (inclusive)
 }
 @media (max-width: var.$mobile) {
-	// rules here apply to devices from 0px to 768px (inclusive)
-    .nav{
-        &-links{
-            &-container{
+    // rules here apply to devices from 0px to 768px (inclusive)
+    .nav {
+        &-links {
+            &-container {
                 display: none;
             }
         }
-        &-burger{
+        &-burger {
             display: flex;
         }
     }
