@@ -1,0 +1,62 @@
+@use '../styles/_variables.scss' as var;
+
+.nav{
+    &-container{
+        align-items: center;
+        justify-content: space-between;
+    }
+    &-name{
+        color: var.$accent-3;
+        font-family: "Homemade Apple", cursive;
+        font-size: 2rem;
+    }
+    &-links{
+        font-size: 1.25rem;
+        margin-left: 2rem;
+
+        &-container{
+            align-items: center;
+            display: flex;
+        }
+        &-contact{
+            color: var.$white;
+            background-color: var.$accent-3;
+            padding: .5rem 2rem;
+        }
+    }
+    &-burger{
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 30px;
+        width: 40px;
+
+        & > div{
+            border-radius: 10px;
+            height: 4px;
+            width: 40px;
+            background-color: var.$accent-3-dark;
+        }
+    }
+}
+
+// all rules outside of @media queries apply to devices 1201px and above
+@media (max-width: var.$desktop) {
+	// rules here apply to devices from 993px to 1200px (inclusive)
+}
+@media (max-width: var.$tablet) {	
+	// rules here apply to devices from 769px to 992px (inclusive)
+}
+@media (max-width: var.$mobile) {
+	// rules here apply to devices from 0px to 768px (inclusive)
+    .nav{
+        &-links{
+            &-container{
+                display: none;
+            }
+        }
+        &-burger{
+            display: flex;
+        }
+    }
+}
