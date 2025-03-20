@@ -4,6 +4,7 @@ import "./styles/global.scss";
 import Nav from "./components/nav";
 import HomeHero from "./sections/homeHero";
 import Who from "./sections/who";
+import What from "./sections/what";
 import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -12,6 +13,7 @@ root.render(
     <Nav />
     <HomeHero />
     <Who />
+    <What />
   </React.StrictMode>
 );
 

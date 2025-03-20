@@ -1,16 +1,14 @@
 @use "../styles/_variables.scss" as var;
+@import "../styles/_mixin.scss";
 
 $imageRightHeight: 500px;
 
 .who {
-    & > h2 {
-        margin-top: 6rem;
-    }
     &-content {
         background-color: var.$accent-1-dark;
 
         &-left {
-            display: flex;
+            @include flexbox();
             flex-direction: column;
             width: 35%;
             &-copy {
@@ -33,7 +31,7 @@ $imageRightHeight: 500px;
             }
         }
         &-right {
-            display: flex;
+            @include flexbox();
             flex-direction: column;
             width: 65%;
             &-image {
@@ -50,7 +48,7 @@ $imageRightHeight: 500px;
 .facts {
     &-container {
         background-color: var.$accent-1;
-        display: flex;
+        @include flexbox();
         flex-direction: column;
         flex-grow: 1;
         justify-content: center;

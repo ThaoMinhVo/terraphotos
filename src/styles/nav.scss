@@ -1,4 +1,5 @@
 @use "../styles/_variables.scss" as var;
+@import "../styles/_mixin.scss";
 
 .nav {
     &-container {
@@ -18,7 +19,7 @@
 
         &-container {
             align-items: center;
-            display: flex;
+            @include flexbox();
         }
         &-contact {
             color: var.$white;
@@ -61,7 +62,7 @@
             }
         }
         &-burger {
-            display: flex;
+            @include flexbox();
         }
     }
 }

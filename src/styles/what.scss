@@ -1,0 +1,264 @@
+@use "../styles/_variables.scss" as var;
+@import "../styles/_mixin.scss";
+
+$topHeight: 600px;
+$bottomHeight: 350px;
+
+$topHeightDesktop: 500px;
+$bottomHeightDesktop: 300px;
+
+$topHeightTablet: 300px;
+$bottomHeightTablet: 300px;
+
+$topHeightMobile: 200px;
+$bottomHeightMobile: 200px;
+
+$borderRadiusLG: 300px;
+
+.what {
+  & > h2 {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  & > p {
+    font-size: 2rem;
+    margin: 0;
+    text-align: right;
+    width: 100%;
+  }
+  &-grid {
+    @include flexbox();
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    &-section {
+      @include flexbox();
+      flex-direction: column;
+      gap: 1.25rem;
+      &-top {
+        width: 32%;
+        height: $topHeight;
+      }
+      &-bottom {
+        width: 49%;
+        height: $bottomHeight;
+      }
+    }
+    &-element {
+      height: 100%;
+      width: 100%;
+
+      &-image {
+        background-position: center;
+        background-size: cover;
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+      }
+
+      &-label {
+        @include flexbox();
+        box-sizing: border-box;
+        background: rgba(211, 212, 196, 0.8);
+        font-size: 1.5rem;
+        justify-content: flex-end;
+        margin: 0;
+        padding: 1rem 2rem;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 2;
+      }
+    }
+  }
+}
+
+.what-grid-section-top .what-grid-element-label {
+  bottom: 0;
+  top: unset;
+}
+
+.couples {
+  background-image: url("../../public/assets/services/couples.jpg");
+  border-radius: $borderRadiusLG $borderRadiusLG 0 0;
+}
+
+.portraits {
+  background-image: url("../../public/assets/services/portraits.jpg");
+}
+
+.fur-babies {
+  background-image: url("../../public/assets/services/furBabies.jpg");
+  border-radius: 0 $borderRadiusLG 0 0;
+}
+
+.proposals {
+  background-image: url("../../public/assets/services/proposals.jpg");
+}
+
+.families {
+  background-image: url("../../public/assets/services/families.jpg");
+  border-radius: 0 0 $borderRadiusLG $borderRadiusLG;
+}
+
+.engagements {
+  background-image: url("../../public/assets/services/engagements.jpg");
+  border-radius: 0 0 $borderRadiusLG $borderRadiusLG;
+}
+
+// all rules outside of @media queries apply to devices 1201px and above
+@media (max-width: var.$desktop) {
+  // rules here apply to devices from 993px to 1200px (inclusive)
+  .what {
+    &-grid {
+      gap: 1rem;
+      &-section {
+        gap: 1rem;
+        &-top {
+          height: $topHeightDesktop;
+        }
+        &-bottom {
+          height: $bottomHeightDesktop;
+        }
+      }
+    }
+  }
+}
+@media (max-width: var.$tablet) {
+  // rules here apply to devices from 769px to 992px (inclusive)
+  .what {
+    & > p {
+      font-size: 1.75rem;
+    }
+    &-grid {
+      gap: 1.5rem;
+      &-section {
+        gap: 1.5rem;
+        &-top {
+          height: $topHeightTablet;
+          &:first-child {
+            width: 60%;
+          }
+          &:nth-child(2) {
+            width: 36%;
+          }
+          &:nth-child(3) {
+            width: 100%;
+            height: $topHeightTablet;
+            flex-direction: row;
+
+            & .what-grid-element {
+              width: 49%;
+            }
+          }
+        }
+        &-bottom {
+          height: $bottomHeightTablet;
+          &:nth-child(4) {
+            width: 35%;
+          }
+          &:nth-child(5) {
+            width: 61%;
+          }
+        }
+      }
+    }
+  }
+  .couples,
+  .fur-babies,
+  .families,
+  .engagements {
+    border-radius: 0;
+  }
+
+  .what-grid-section-bottom .what-grid-element-label {
+    bottom: 0;
+    top: unset;
+  }
+
+  .couples {
+    background-position: center -100px;
+  }
+
+  .portraits {
+    background-position: center -30px;
+  }
+}
+@media (max-width: var.$mobile) {
+  // rules here apply to devices from 501px to 768px (inclusive)
+  .what {
+    & > p {
+      font-size: 1.5rem;
+    }
+    &-grid {
+      gap: 0.75rem;
+      &-section {
+        gap: 0.75rem;
+        &-top {
+          &:first-child {
+            height: $topHeightMobile;
+            width: 60%;
+          }
+          &:nth-child(2) {
+            height: $topHeightMobile;
+            width: 37%;
+          }
+          &:nth-child(3) {
+            height: $topHeightMobile;
+
+            & .what-grid-element {
+              height: $topHeightMobile;
+            }
+          }
+        }
+        &-bottom {
+          height: $bottomHeightTablet;
+          &:nth-child(4) {
+            height: $bottomHeightMobile;
+            width: 35%;
+          }
+          &:nth-child(5) {
+            height: $bottomHeightMobile;
+            width: 62%;
+          }
+        }
+      }
+      &-element {
+        &-label {
+          font-size: 1.25rem;
+          padding: 0.5rem 1rem;
+        }
+      }
+    }
+  }
+}
+
+//special case for this section only
+// restructure if this is used in my sections
+@media (max-width: var.$mobileXS) {
+  // rules here apply to devices from 0px to 768px (inclusive)
+  .what {
+    & > p {
+      font-size: 1.25rem;
+    }
+    &-grid {
+      gap: 0.5rem;
+      &-section {
+        gap: 0.5rem;
+      }
+    }
+  }
+  .couples {
+    background-position: center -50px;
+  }
+
+  .portraits {
+    background-position: center -20px;
+  }
+
+  .families {
+    background-position: center -30px;
+  }
+}

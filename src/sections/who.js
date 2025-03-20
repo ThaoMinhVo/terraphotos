@@ -3,7 +3,7 @@ import "../styles/who.scss";
 
 function who() {
   return (
-    <div className="container-outer column who">
+    <div className="container-outer column section-margin who">
       <h2>who me?</h2>
       <div className="container-outer who-content">
         <div className="container">

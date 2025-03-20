@@ -1,7 +1,9 @@
 @use "../styles/_variables.scss" as var;
+@import "../styles/_mixin.scss";
 
 body {
   background-color: var.$base;
+  color: var.$accent-3-dark;
   font-family: "Mulish", sans-serif;
   font-optical-sizing: auto;
   font-size: 1.25rem;
@@ -13,6 +15,7 @@ body {
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box; /* Firefox, other Gecko */
   box-sizing: border-box; /* Opera/IE 8+ */
+  overflow-x: hidden;
 }
 
 a {
@@ -50,19 +53,19 @@ h2 {
 }
 
 .container {
+  @include flexbox();
   box-sizing: border-box;
-  display: flex;
   max-width: 1440px;
   padding: 0 3rem;
   width: 100%;
   &-full {
-    display: flex;
+    @include flexbox();
     max-width: 1440px;
     padding: 0;
     width: 100%;
   }
   &-outer {
-    display: flex;
+    @include flexbox();
     justify-content: center;
     width: 100%;
   }
@@ -77,12 +80,22 @@ h2 {
   justify-content: space-between;
 }
 
+.section-margin {
+  margin-top: 6rem;
+}
+
 // all rules outside of @media queries apply to devices 1201px and above
 @media (max-width: var.$desktop) {
   // rules here apply to devices from 993px to 1200px (inclusive)
 }
 @media (max-width: var.$tablet) {
   // rules here apply to devices from 769px to 992px (inclusive)
+  h2 {
+    font-size: 2.5rem;
+  }
+  .container {
+    padding: 0 2rem;
+  }
 }
 @media (max-width: var.$mobile) {
   // rules here apply to devices from 0px to 768px (inclusive)
@@ -92,5 +105,19 @@ h2 {
 
   h1 {
     font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: var.$mobileXS) {
+  h2 {
+    font-size: 6vw;
   }
 }
