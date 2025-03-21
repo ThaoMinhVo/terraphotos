@@ -4,6 +4,7 @@
 .hero {
     height: 80vh;
     max-height: 800px;
+    min-height: 650px;
     justify-content: space-between;
     &-1 {
         width: 20%;
@@ -69,6 +70,7 @@
 @media (max-width: var.$mobile) {
     // rules here apply to devices from 501px to 768px (inclusive)
     .hero {
+        max-height: 600px;
         &-2 {
             width: 40%;
         }
@@ -81,6 +83,8 @@
 @media (max-width: var.$mobileXS) {
     // rules here apply to devices from 0px to 500px (inclusive)
     .hero {
+        height: 85vh;
+        max-height: 800px;
         flex-direction: row-reverse;
         flex-wrap: wrap;
         &-1 {

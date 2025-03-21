@@ -13,8 +13,6 @@ $bottomHeightTablet: 300px;
 $topHeightMobile: 200px;
 $bottomHeightMobile: 200px;
 
-$borderRadiusLG: 400px;
-
 .what {
   & > h2 {
     width: 100%;
@@ -82,7 +80,7 @@ $borderRadiusLG: 400px;
 
 .couples {
   background-image: url("../../public/assets/services/couples.jpg");
-  border-radius: $borderRadiusLG $borderRadiusLG 0 0;
+  border-radius: var.$borderRadiusLG var.$borderRadiusLG 0 0;
 }
 
 .portraits {
@@ -91,7 +89,7 @@ $borderRadiusLG: 400px;
 
 .fur-babies {
   background-image: url("../../public/assets/services/furBabies.jpg");
-  border-radius: 0 $borderRadiusLG 0 0;
+  border-radius: 0 var.$borderRadiusLG 0 0;
 }
 
 .proposals {
@@ -100,12 +98,12 @@ $borderRadiusLG: 400px;
 
 .families {
   background-image: url("../../public/assets/services/families.jpg");
-  border-radius: 0 0 $borderRadiusLG $borderRadiusLG;
+  border-radius: 0 0 var.$borderRadiusLG var.$borderRadiusLG;
 }
 
 .engagements {
   background-image: url("../../public/assets/services/engagements.jpg");
-  border-radius: 0 0 $borderRadiusLG $borderRadiusLG;
+  border-radius: 0 0 var.$borderRadiusLG var.$borderRadiusLG;
 }
 
 // all rules outside of @media queries apply to devices 1201px and above
@@ -174,7 +172,7 @@ $borderRadiusLG: 400px;
 
   .couples {
     background-position: center -100px;
-    border-radius: $borderRadiusLG 0 0 0;
+    border-radius: var.$borderRadiusLG 0 0 0;
   }
 
   .portraits {
@@ -182,7 +180,7 @@ $borderRadiusLG: 400px;
   }
 
   .engagements {
-    border-radius: 0 0 $borderRadiusLG 0;
+    border-radius: 0 0 var.$borderRadiusLG 0;
   }
 }
 @media (max-width: var.$mobile) {

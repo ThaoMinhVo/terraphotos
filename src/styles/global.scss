@@ -56,6 +56,15 @@ h3 {
   font-size: 3rem;
 }
 
+button {
+  border: none;
+  background-color: var.$accent-3-dark;
+  color: var.$white;
+  font-size: 1.5rem;
+  padding: 1rem 6rem;
+  width: fit-content;
+}
+
 .container {
   @include flexbox();
   box-sizing: border-box;
@@ -99,11 +108,15 @@ ul {
 // all rules outside of @media queries apply to devices 1201px and above
 @media (max-width: var.$desktop) {
   // rules here apply to devices from 993px to 1200px (inclusive)
+  h1 {
+    font-size: 2.5rem;
+  }
+
 }
 @media (max-width: var.$tablet) {
   // rules here apply to devices from 769px to 992px (inclusive)
   h2 {
-    font-size: 2.5rem;
+    font-size: 2.25rem;
   }
   .container {
     padding: 0 2rem;
@@ -129,6 +142,11 @@ ul {
 
   .container {
     padding: 0 1rem;
+  }
+
+  button {
+    padding: 1rem 2rem;
+    width: 100%;
   }
 }
 

@@ -1,0 +1,66 @@
+@use "../styles/_variables.scss" as var;
+@import "../styles/_mixin.scss";
+
+.home-cta {
+  min-height: 600px;
+  padding: 3rem;
+  &-bg {
+    background-image: url("../../public/assets/prints/cta-bg.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+
+  &-content {
+    @include flexbox();
+    align-items: center;
+    background-color: rgba(216, 197, 182, 0.7);
+    flex-direction: column;
+    max-width: 40%;
+    padding: 4rem 6rem;
+    text-align: center;
+    font-size: 1.5rem;
+
+    & > h2 {
+      font-size: 3rem;
+      line-height: 4rem;
+    }
+  }
+}
+
+// all rules outside of @media queries apply to devices 1201px and above
+@media (max-width: var.$desktop) {
+  // rules here apply to devices from 993px to 1200px (inclusive)
+  .home-cta {
+    min-height: 500px;
+    padding: 2rem;
+    &-content {
+      max-width: 50%;
+      padding: 3rem 6rem;
+    }
+  }
+}
+@media (max-width: var.$tablet) {
+  // rules here apply to devices from 769px to 992px (inclusive)
+}
+@media (max-width: var.$mobile) {
+  // rules here apply to devices from 501px to 768px (inclusive)
+  .home-cta {
+    min-height: unset;
+    padding: 3rem;
+    &-content {
+      max-width: 80%;
+      padding: 2rem 4rem;
+    }
+  }
+}
+@media (max-width: var.$mobileXS) {
+  // rules here apply to devices from 0px to 500px (inclusive)
+  .home-cta {
+    min-height: unset;
+    padding: 2rem;
+    &-content {
+      max-width: 85%;
+      padding: 2rem;
+    }
+  }
+}
