@@ -5,7 +5,7 @@ function what() {
   return (
     <div className="container-outer">
       <div className="container column section-margin what">
-        <h2>what I can do for you :</h2>
+        <h2>what I offer :</h2>
         <div className="what-grid">
           <div className="what-grid-section what-grid-section-top">
             <div className="what-grid-element">

@@ -96,6 +96,8 @@
 @media (max-width: var.$mobile) {
   // rules here apply to devices from 501px to 768px (inclusive)
   .how {
+    padding-top: 5rem;
+    padding-bottom: 4rem;
     &-grid {
       flex-direction: column;
       align-items: flex-end;

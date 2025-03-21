@@ -12,9 +12,6 @@
             &-copy {
                 color: var.$white;
                 padding: 2rem 0;
-                & h3 {
-                    font-size: 3rem;
-                }
                 & p {
                     max-width: 90%;
                 }
@@ -104,6 +101,12 @@
                     display:none;
                 }
             }
+        }
+    }
+
+    .facts {
+        &-container {
+            padding: 1rem 2rem;
         }
     }
 }

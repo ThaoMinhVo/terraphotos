@@ -52,6 +52,10 @@ h2 {
   }
 }
 
+h3 {
+  font-size: 3rem;
+}
+
 .container {
   @include flexbox();
   box-sizing: border-box;
@@ -69,6 +73,10 @@ h2 {
     justify-content: center;
     width: 100%;
   }
+}
+
+ul {
+  padding-left: 20px;
 }
 
 .center {
@@ -115,13 +123,17 @@ h2 {
     font-size: 2rem;
   }
 
+  h3 {
+    font-size: 2rem;
+  }
+
   .container {
     padding: 0 1rem;
   }
 }
 
 @media (max-width: var.$mobileXS) {
-  h2 {
-    font-size: 6vw;
+  body {
+    font-size: 1.1rem;
   }
 }

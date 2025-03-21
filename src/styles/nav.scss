@@ -66,3 +66,11 @@
         }
     }
 }
+@media (max-width: var.$mobileXS) {
+    .nav {
+        &-name {
+            font-size: 1.5rem;
+        }
+    }
+}
+
