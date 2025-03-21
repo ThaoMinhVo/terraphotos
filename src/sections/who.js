@@ -6,7 +6,7 @@ function who() {
     <div className="container-outer column section-margin who">
       <h2>who me?</h2>
       <div className="container-outer who-content">
-        <div className="container">
+        <div className="container who-container">
           <div className="who-content-left">
             <div className="who-content-left-copy">
               <h3>I'm Terra!</h3>

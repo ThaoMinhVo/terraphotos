@@ -52,13 +52,50 @@
 @media (max-width: var.$tablet) {
     // rules here apply to devices from 769px to 992px (inclusive)
     .hero {
+        &-1 {
+            display: none;
+        }
+        &-2 {
+            width: 49%;
+        }
         &-3 {
             &-text {
-                padding: 2rem 3rem;
+                padding: 6rem 3rem;
             }
         }
     }
 }
+
 @media (max-width: var.$mobile) {
-    // rules here apply to devices from 0px to 768px (inclusive)
+    // rules here apply to devices from 501px to 768px (inclusive)
+    .hero {
+        &-2 {
+            width: 40%;
+        }
+        &-3 {
+            width: 57%;
+        }
+    }
+}
+
+@media (max-width: var.$mobileXS) {
+    // rules here apply to devices from 0px to 500px (inclusive)
+    .hero {
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+        &-1 {
+            display: unset;
+            width: 35%;
+        }
+        &-2 {
+            width: 65%;
+            background-position: center;
+        }
+        &-3 {
+            width: 100%;
+            &-text {
+                padding: 2rem;
+            }
+        }
+    }
 }

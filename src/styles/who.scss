@@ -1,8 +1,6 @@
 @use "../styles/_variables.scss" as var;
 @import "../styles/_mixin.scss";
 
-$imageRightHeight: 500px;
-
 .who {
     &-content {
         background-color: var.$accent-1-dark;
@@ -13,12 +11,12 @@ $imageRightHeight: 500px;
             width: 35%;
             &-copy {
                 color: var.$white;
-                padding: 3rem 0;
+                padding: 2rem 0;
                 & h3 {
                     font-size: 3rem;
                 }
                 & p {
-                    max-width: 80%;
+                    max-width: 90%;
                 }
             }
             &-image {
@@ -38,7 +36,7 @@ $imageRightHeight: 500px;
                 background-image: url("../../public/assets/prints/me-right.jpg");
                 background-position: center;
                 background-size: cover;
-                height: $imageRightHeight;
+                height: 500px;
                 width: 100%;
             }
         }
@@ -54,4 +52,62 @@ $imageRightHeight: 500px;
         justify-content: center;
         padding: 2rem 5rem;
     }
+}
+
+// all rules outside of @media queries apply to devices 1201px and above
+@media (max-width: var.$desktop) {
+    // rules here apply to devices from 993px to 1200px (inclusive)
+}
+
+@media (max-width: var.$tablet) {
+    // rules here apply to devices from 769px to 992px (inclusive)
+    .who {
+        &-content {
+            &-left {
+                width: 40%;
+            }
+            &-right {
+                width: 60%;
+            }
+        }
+    }
+    .facts {
+        &-container {
+            padding: 2rem 2.5rem;
+        }
+    }
+}
+
+@media (max-width: var.$mobile) {
+    // rules here apply to devices from 501px to 768px (inclusive)
+    .who {
+        &-container{
+            flex-direction: column;
+        }
+        &-content {
+            background-color: var.$accent-1-dark;
+            &-left {
+                flex-direction: row;
+                width:100%;
+                &-copy{
+                    padding: 3rem 1rem;
+                    width:55%;
+                }
+                &-image{
+                    width:45%;
+                    min-height: 400px;
+                }
+            }
+            &-right {
+                width: 100%;
+                &-image {
+                    display:none;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: var.$mobileXS) {
+    // rules here apply to devices from 0px to 500px (inclusive)
 }

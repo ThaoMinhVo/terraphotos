@@ -166,24 +166,23 @@ $borderRadiusLG: 400px;
       }
     }
   }
-  .couples,
-  .fur-babies,
-  .families,
-  .engagements {
-    border-radius: 0;
-  }
 
-  .what-grid-section-bottom .what-grid-element-label {
-    bottom: 0;
-    top: unset;
+  .fur-babies,
+  .families {
+    border-radius: 0;
   }
 
   .couples {
     background-position: center -100px;
+    border-radius: $borderRadiusLG 0 0 0;
   }
 
   .portraits {
     background-position: center -30px;
+  }
+
+  .engagements {
+    border-radius: 0 0 $borderRadiusLG 0;
   }
 }
 @media (max-width: var.$mobile) {

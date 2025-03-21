@@ -8,7 +8,7 @@ function how() {
         <h2>how to get started</h2>
         <div className="how-grid">
           <div className="how-grid-item">
-            <p className="how-grid-item-detail">Contact me to receive package options and work out a date.</p>
+            <p className="how-grid-item-detail">Contact me to receive package options and work out availability.</p>
             <p className="how-grid-item-name how-grid-item-name-1">select</p>
           </div>
           <div className="how-grid-item">
