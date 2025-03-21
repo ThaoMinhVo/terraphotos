@@ -1,0 +1,155 @@
+@use "../styles/_variables.scss" as var;
+@import "../styles/_mixin.scss";
+
+.how {
+  padding-top: 6rem;
+  padding-bottom: 12rem;
+
+  &-bg {
+    background-color: var.$base-dark;
+  }
+
+  &-grid {
+    @include flexbox();
+    justify-content: space-between;
+    margin-top: 3rem;
+    width: 100%;
+
+    &-item {
+      & > p {
+        margin: 0;
+      }
+      @include flexbox();
+      aspect-ratio: 1 / 1;
+      align-items: center;
+      background-color: var.$accent-2;
+      justify-content: center;
+      position: relative;
+      width: 28%;
+      &-detail {
+        max-width: 70%;
+        padding-bottom: 3rem;
+        text-align: center;
+      }
+      &-name {
+        @include flexbox();
+        align-items: center;
+        aspect-ratio: 1 / 1;
+        background-color: var.$accent-2-dark;
+        bottom: 0;
+        transform: translateY(50%);
+        color: var.$white;
+        font-size: 2rem;
+        justify-content: center;
+        position: absolute;
+        width: 35%;
+        &-1 {
+          border-radius: 0 100px 100px 100px;
+        }
+        &-2 {
+          border-radius: 100px 0 100px 100px;
+        }
+        &-3 {
+          border-radius: 100px 100px 0 100px;
+        }
+      }
+    }
+  }
+}
+
+// all rules outside of @media queries apply to devices 1201px and above
+@media (max-width: var.$desktop) {
+  // rules here apply to devices from 993px to 1200px (inclusive)
+  .how {
+    padding-bottom: 10rem;
+    &-grid {
+      &-item {
+        &-detail {
+          padding-bottom: 2rem;
+        }
+        &-name {
+          font-size: 1.75rem;
+        }
+      }
+    }
+  }
+}
+@media (max-width: var.$tablet) {
+  // rules here apply to devices from 769px to 992px (inclusive)
+  .how {
+    &-grid {
+      &-item {
+        width: 29%;
+        &-detail {
+          max-width: 80%;
+          font-size: 1.1rem;
+          padding-bottom: 1.5rem;
+        }
+        &-name {
+          font-size: 1.5rem;
+          width: 40%;
+        }
+      }
+    }
+  }
+}
+@media (max-width: var.$mobile) {
+  // rules here apply to devices from 501px to 768px (inclusive)
+  .how {
+    &-grid {
+      flex-direction: column;
+      align-items: flex-end;
+      &-item {
+        aspect-ratio: unset;
+        margin-bottom: 2rem;
+        width: 80%;
+        &:nth-child(2) {
+          margin-right: 20%;
+        }
+        &-detail {
+          max-width: 80%;
+          font-size: 1.2rem;
+          padding: 3rem 0;
+        }
+        &-name {
+          font-size: 1.5rem;
+          left: 0;
+          transform: translate(-70%, -50%);
+          top: 50%;
+          width: 100px;
+          height: 100px;
+
+          &-2 {
+            right: 0;
+            left:unset;
+            transform: translate(70%, -50%);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: var.$mobileXS) {
+  .how {
+    &-grid {
+      &-item {
+        margin-bottom: 2rem;
+        width: 80%;
+        &:nth-child(2) {
+          margin-right: 20%;
+        }
+        &-detail {
+          max-width: 75%;
+          font-size: 1.1rem;
+          padding: 2rem 0;
+        }
+        &-name {
+          font-size: 1.3rem;
+          width: 90px;
+          height: 90px;
+        }
+      }
+    }
+  }
+}

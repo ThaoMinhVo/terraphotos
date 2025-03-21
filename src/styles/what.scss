@@ -13,7 +13,7 @@ $bottomHeightTablet: 300px;
 $topHeightMobile: 200px;
 $bottomHeightMobile: 200px;
 
-$borderRadiusLG: 300px;
+$borderRadiusLG: 400px;
 
 .what {
   & > h2 {
@@ -61,7 +61,7 @@ $borderRadiusLG: 300px;
       &-label {
         @include flexbox();
         box-sizing: border-box;
-        background: rgba(211, 212, 196, 0.8);
+        background: rgba(211, 212, 196, 0.85);
         font-size: 1.5rem;
         justify-content: flex-end;
         margin: 0;
