@@ -5,7 +5,7 @@ function how() {
   return (
     <div className="container-outer column section-margin how-bg">
       <div className="container column center how">
-        <h2>how to get started</h2>
+        <h2>how to start</h2>
         <div className="how-grid">
           <div className="how-grid-item">
             <p className="how-grid-item-detail">Contact me to receive package options and work out availability.</p>
