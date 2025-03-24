@@ -9,15 +9,15 @@ function how() {
         <div className="how-grid">
           <div className="how-grid-item">
             <p className="how-grid-item-detail">Contact me to receive package options and work out availability.</p>
-            <p className="how-grid-item-name">select</p>
+            <h3 className="how-grid-item-name">select</h3>
           </div>
           <div className="how-grid-item">
             <p className="how-grid-item-detail">Lock in your date with a signed contract and paid retainer.</p>
-            <p className="how-grid-item-name">secure</p>
+            <h3 className="how-grid-item-name">secure</h3>
           </div>
           <div className="how-grid-item">
             <p className="how-grid-item-detail">I'll work with you to ensure a seamless session—scouting locations, selecting outfits, choosing props, and more.</p>
-            <p className="how-grid-item-name">slay</p>
+            <h3 className="how-grid-item-name">slay</h3>
           </div>
         </div>
       </div>
