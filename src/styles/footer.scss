@@ -1,0 +1,162 @@
+@use "../styles/_variables.scss" as var;
+@import "../styles/_mixin.scss";
+
+.footer {
+  flex-direction: column;
+  align-items: center;
+  &-content {
+    padding: 7rem 0;
+  }
+
+  &-social {
+    &-container {
+      width: 30%;
+
+      & > p {
+        margin-bottom: 0;
+      }
+
+      &:first-child {
+        text-align: right;
+      }
+    }
+
+    &-link {
+      @include flexbox();
+      align-items: center;
+
+      &-left {
+        justify-content: flex-end;
+      }
+    }
+  }
+
+  &-logo {
+    width: 18%;
+    background-image: url("../../public/assets/logo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &-links {
+    padding: 2rem 0;
+    &-bg {
+      background-color: var.$accent-1;
+    }
+    &-container {
+      align-items: center;
+      justify-content: center;
+      gap: 3rem;
+    }
+    &-divider {
+      background-color: var.$accent-1-dark;
+      height: 1.75rem;
+      width: 2px;
+    }
+  }
+
+  &-rights {
+    padding: 1rem 0;
+    position: relative;
+
+    &-bg {
+      background-color: var.$accent-1-dark;
+    }
+  }
+}
+
+.icon {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-height: 2rem;
+  height: 2rem;
+  min-width: 2rem;
+  width: 2rem;
+  &-insta {
+    background-image: url("../../public/assets/icons/instagram.png");
+    margin-left: 1rem;
+  }
+  &-email {
+    background-image: url("../../public/assets/icons/email.png");
+    margin-right: 1rem;
+  }
+}
+
+.legal {
+  font-size: 1rem;
+}
+
+.backToTop {
+  background-color: var.$base-dark;
+  border-radius: 200px 200px 0 0;
+  bottom: 0;
+  padding: 3rem 4rem 0 4rem;
+  position: absolute;
+  right: 0px;
+}
+
+.mobile{
+  &-show{
+    display:none;
+  }
+}
+
+// all rules outside of @media queries apply to devices 1201px and above
+@media (max-width: var.$desktop) {
+  // rules here apply to devices from 993px to 1400px (inclusive)
+}
+@media (max-width: var.$tablet) {
+  // rules here apply to devices from 769px to 992px (inclusive)
+}
+
+@media (max-width: var.$mobile) {
+  // rules here apply to devices from 501px to 768px (inclusive)
+  .footer {
+    &-content {
+    }
+
+    &-social {
+      &-container {
+        width: 60%;
+        & > p {
+        }
+      }
+
+      &-link {
+        &-left {
+        }
+      }
+    }
+
+    &-logo {
+      width: 15%;
+      max-height: 150px;
+      background-image: url("../../public/assets/logo.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  .icon {
+    &-insta {
+      margin-left: 0rem;
+      margin-right: 1rem;
+    }
+  }
+
+  .mobile {
+    &-hide {
+      display: none;
+    }
+    &-show {
+      display: flex;
+    }
+  }
+}
+
+@media (max-width: var.$mobileXS) {
+  // rules here apply to devices from 0px to 500px (inclusive)
+}

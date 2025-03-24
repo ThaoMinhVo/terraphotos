@@ -7,6 +7,7 @@ import Who from "./sections/who";
 import What from "./sections/what";
 import How from "./sections/how";
 import HomeCTA from "./sections/homeCta";
+import Footer from "./components/footer";
 import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -18,6 +19,7 @@ root.render(
     <What />
     <How />
     <HomeCTA />
+    <Footer />
   </React.StrictMode>
 );
 
