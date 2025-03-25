@@ -105,6 +105,12 @@ ul {
   margin-top: 6rem;
 }
 
+.mobile{
+  &-show{
+    display:none;
+  }
+}
+
 // all rules outside of @media queries apply to devices 1201px and above
 @media (max-width: var.$desktop) {
   // rules here apply to devices from 993px to 1200px (inclusive)
@@ -147,6 +153,15 @@ ul {
   button {
     padding: 1rem 2rem;
     width: 100%;
+  }
+
+  .mobile {
+    &-hide {
+      display: none;
+    }
+    &-show {
+      display: flex;
+    }
   }
 }
 

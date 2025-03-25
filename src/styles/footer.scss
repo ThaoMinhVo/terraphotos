@@ -4,29 +4,29 @@
 .footer {
   flex-direction: column;
   align-items: center;
+  font-size: 1rem;
   &-content {
     padding: 7rem 0;
   }
-
   &-social {
     &-container {
-      width: 30%;
-
+      width: 20%;
       & > p {
         margin-bottom: 0;
       }
-
       &:first-child {
         text-align: right;
       }
     }
-
     &-link {
       @include flexbox();
       align-items: center;
-
+      margin-top: 1rem;
       &-left {
         justify-content: flex-end;
+      }
+      &.mobile-show {
+        display: none;
       }
     }
   }
@@ -85,7 +85,8 @@
 }
 
 .legal {
-  font-size: 1rem;
+  font-size: 0.75rem;
+  margin-left: 2rem;
 }
 
 .backToTop {
@@ -95,48 +96,58 @@
   padding: 3rem 4rem 0 4rem;
   position: absolute;
   right: 0px;
-}
 
-.mobile{
-  &-show{
-    display:none;
+  & > p {
+    font-family: "Homemade Apple", cursive;
+    margin: 0;
   }
 }
 
 // all rules outside of @media queries apply to devices 1201px and above
 @media (max-width: var.$desktop) {
   // rules here apply to devices from 993px to 1400px (inclusive)
-}
-@media (max-width: var.$tablet) {
-  // rules here apply to devices from 769px to 992px (inclusive)
+  .footer {
+    &-content {
+      padding: 5rem 0;
+    }
+    &-social {
+      &-container {
+        width: 27%;
+      }
+    }
+  }
+
+  .backToTop {
+    padding: 2rem 1rem 0rem 1rem;
+    font-size: 1.25rem;
+    right: 2rem;
+  }
 }
 
-@media (max-width: var.$mobile) {
-  // rules here apply to devices from 501px to 768px (inclusive)
+@media (max-width: var.$tablet) {
+  // rules here apply to devices from 769px to 992px (inclusive)
   .footer {
     &-content {
     }
 
     &-social {
       &-container {
-        width: 60%;
+        width: 35%;
         & > p {
-        }
-      }
-
-      &-link {
-        &-left {
         }
       }
     }
 
     &-logo {
       width: 15%;
-      max-height: 150px;
-      background-image: url("../../public/assets/logo.png");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: contain;
+      margin-right: 2rem;
+      min-width: 80px;
+    }
+
+    &-links {
+      &-container {
+        gap: 1rem;
+      }
     }
   }
 
@@ -147,16 +158,72 @@
     }
   }
 
-  .mobile {
-    &-hide {
-      display: none;
+  .backToTop {
+    &-mobile {
+      padding: 1rem 0;
+
+      & > p {
+        font-family: "Homemade Apple", cursive;
+        margin: 0;
+      }
+
+      &-bg {
+        background-color: var.$base-dark;
+      }
     }
-    &-show {
-      display: flex;
+  }
+}
+
+@media (max-width: var.$mobile) {
+  // rules here apply to devices from 501px to 768px (inclusive)
+  .footer {
+    &-content {
+      padding: 3rem 0;
     }
+    &-social {
+      &-container {
+        width: fit-content;
+      }
+      &.mobile-show {
+        display: flex;
+      }
+      &-link {
+        margin-top: 0rem;
+        &.mobile-show {
+          display: flex;
+        }
+      }
+    }
+    &-rights {
+      justify-content: center;
+    }
+    &-links {
+      padding: 1.5rem 0;
+    }
+    &-rights {
+      padding: 0.5rem 0;
+    }
+    &-logo {
+      border-right: 2px solid var.$accent-1-dark;
+      margin-right: 1rem;
+    }
+  }
+
+  .legal {
+    text-align: center;
+  }
+
+  .icon {
+    min-height: 1.5rem;
+    height: 1.5rem;
+    min-width: 1.5rem;
+    width: 1.5rem;
   }
 }
 
 @media (max-width: var.$mobileXS) {
   // rules here apply to devices from 0px to 500px (inclusive)
+  .footer {
+    font-size: 0.8rem;
+  }
 }

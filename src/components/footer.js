@@ -10,19 +10,30 @@ function footer() {
             See what I’m up to and where I’ll be at by following me on
             Instagram.
           </p>
-          <a href="https://www.instagram.com/terravo.photos/" className="footer-social-link footer-social-link-left">
+          <a
+            href="https://www.instagram.com/terravo.photos/"
+            className="footer-social-link footer-social-link-left"
+          >
             <p>terravo.photos</p>
             <div className="icon icon-insta"></div>
           </a>
         </div>
         <div className="footer-logo" />
         <div className="footer-social-container">
-          <p className="mobile-hide">Email me directly for package options and any other questions.</p>
-          <a href= "mailto:terravophotos@gmail.com" className="footer-social-link">
+          <p className="mobile-hide">
+            Email me directly for package options and any other questions.
+          </p>
+          <a
+            href="mailto:terravophotos@gmail.com"
+            className="footer-social-link"
+          >
             <div className="icon icon-email"></div>
             <p>terravophotos@gmail.com</p>
           </a>
-          <a href="https://www.instagram.com/terravo.photos/" className="footer-social-link mobile-show">
+          <a
+            href="https://www.instagram.com/terravo.photos/"
+            className="footer-social-link mobile-show"
+          >
             <div className="icon icon-insta"></div>
             <p>terravo.photos</p>
           </a>
@@ -50,11 +61,18 @@ function footer() {
       <div className="container-outer footer-rights-bg">
         <div className="container footer-rights">
           <p className="legal">© TERRA VO PHOTOS 2025 | ALL RIGHTS RESERVED </p>
-          <div className="backToTop">
+          <div className="backToTop mobile-hide">
             <div className="backToTop-arrow"></div>
             <p>back to top</p>
           </div>
         </div>
+      </div>
+      <div className="container-outer mobile-show backToTop-mobile-bg">
+        <a href="/" className="container center backToTop-mobile">
+          <div className="backToTop-mobile-arrow" />
+          <p>back to top</p>
+          <div className="backToTop-mobile-arrow" />
+        </a>
       </div>
     </div>
   );
