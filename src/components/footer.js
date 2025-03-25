@@ -10,7 +10,7 @@ function footer() {
             See what I’m up to and where I’ll be at by following me on
             Instagram.
           </p>
-          <a className="footer-social-link footer-social-link-left">
+          <a href="https://www.instagram.com/terravo.photos/" className="footer-social-link footer-social-link-left">
             <p>terravo.photos</p>
             <div className="icon icon-insta"></div>
           </a>
@@ -18,11 +18,11 @@ function footer() {
         <div className="footer-logo" />
         <div className="footer-social-container">
           <p className="mobile-hide">Email me directly for package options and any other questions.</p>
-          <a className="footer-social-link">
+          <a href= "mailto:terravophotos@gmail.com" className="footer-social-link">
             <div className="icon icon-email"></div>
             <p>terravophotos@gmail.com</p>
           </a>
-          <a className="footer-social-link mobile-show">
+          <a href="https://www.instagram.com/terravo.photos/" className="footer-social-link mobile-show">
             <div className="icon icon-insta"></div>
             <p>terravo.photos</p>
           </a>
