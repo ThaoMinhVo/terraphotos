@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/navMobile.scss";
+import { HashLink } from "react-router-hash-link";
 
 function navMobile() {
   const closeNav = () => {
@@ -15,18 +16,18 @@ function navMobile() {
       <div className="container column navMobile-container">
         <div className="logo navMobile-logo"></div>
         <div className="navMobile-links-container">
-          <a className="navMobile-links" href="#who">
+          <HashLink onClick={closeNav} className="navMobile-links" to="/#who" smooth>
             who
-          </a>
-          <a className="navMobile-links" href="#what">
+          </HashLink>
+          <HashLink onClick={closeNav} className="navMobile-links" to="/#what" smooth>
             what
-          </a>
-          <a className="navMobile-links" href="#how">
+          </HashLink>
+          <HashLink onClick={closeNav} className="navMobile-links" to="/#how" smooth>
             how
-          </a>
-          <a className="navMobile-links" href="/">
+          </HashLink>
+          <HashLink onClick={closeNav} className="navMobile-links" to="/contact" smooth>
             contact
-          </a>
+          </HashLink>
         </div>
         <div className="navMobile-socials-container">
           <a
