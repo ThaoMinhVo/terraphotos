@@ -16,6 +16,10 @@ body {
   -moz-box-sizing: border-box; /* Firefox, other Gecko */
   box-sizing: border-box; /* Opera/IE 8+ */
   overflow-x: hidden;
+
+  &.lock-scrolling{
+    overflow: hidden;
+  }
 }
 
 a {
@@ -169,6 +173,10 @@ ul {
       display: flex;
     }
   }
+}
+
+.section-margin {
+  margin-top: 3rem;
 }
 
 @media (max-width: var.$mobileXS) {

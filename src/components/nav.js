@@ -6,6 +6,7 @@ import { HashLink } from "react-router-hash-link";
 function nav() {
   const openNav = () => {
     document.getElementById("navMobile").classList.remove("navMobile-close");
+    document.body.classList.add("lock-scrolling");
   };
   return (
     <div id="top" className="container-outer nav">

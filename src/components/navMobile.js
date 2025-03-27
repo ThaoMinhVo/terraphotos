@@ -5,6 +5,7 @@ import { HashLink } from "react-router-hash-link";
 function navMobile() {
   const closeNav = () => {
     document.getElementById("navMobile").classList.add("navMobile-close");
+    document.body.classList.remove("lock-scrolling");
   }
 
   return (
