@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/footer.scss";
+import { HashLink } from "react-router-hash-link";
 
 function footer() {
   return (
@@ -18,7 +19,7 @@ function footer() {
             <div className="icon icon-insta"></div>
           </a>
         </div>
-        <div className="footer-logo" />
+        <div className="logo footer-logo" />
         <div className="footer-social-container">
           <p className="mobile-hide">
             Email me directly for package options and any other questions.
@@ -61,18 +62,18 @@ function footer() {
       <div className="container-outer footer-rights-bg">
         <div className="container footer-rights">
           <p className="legal">© TERRA VO PHOTOS 2025 | ALL RIGHTS RESERVED </p>
-          <div className="backToTop mobile-hide">
+          <HashLink to="#top" className="backToTop mobile-hide" smooth>
             <div className="backToTop-arrow"></div>
             <p>back to top</p>
-          </div>
+          </HashLink>
         </div>
       </div>
       <div className="container-outer mobile-show backToTop-mobile-bg">
-        <a href="/" className="container center backToTop-mobile">
+        <HashLink to="#top" className="container center backToTop-mobile" smooth>
           <div className="backToTop-mobile-arrow" />
           <p>back to top</p>
           <div className="backToTop-mobile-arrow" />
-        </a>
+        </HashLink>
       </div>
     </div>
   );

@@ -1,28 +1,37 @@
 import React from "react";
 import "../styles/nav.scss";
+import NavMobile from "./navMobile";
+import { HashLink } from "react-router-hash-link";
 
 function nav() {
+  const openNav = () => {
+    document.getElementById("navMobile").classList.remove("navMobile-close");
+  };
   return (
-    <div className="container-outer">
+    <div id="top" className="container-outer nav">
+      <NavMobile />
       <div className="container nav-container">
         <a className="nav-name" href="/">
           terra.photos
         </a>
         <p className="nav-links-container">
-          <a className="nav-links" href="#who">
+          <a className="nav-links" href="/">
+            home
+          </a>
+          <HashLink className="nav-links" to="/#who" smooth>
             who
-          </a>
-          <a className="nav-links" href="#what">
+          </HashLink>
+          <HashLink className="nav-links" to="/#what" smooth>
             what
-          </a>
-          <a className="nav-links" href="#how">
+          </HashLink>
+          <HashLink className="nav-links" to="/#how" smooth>
             how
-          </a>
-          <a className="nav-links nav-links-contact" href="/">
+          </HashLink>
+          <a className="nav-links nav-links-contact" href="/contact">
             contact
           </a>
         </p>
-        <div className="nav-burger">
+        <div onClick={openNav} className="nav-burger">
           <div className="nav-burger-1" />
           <div className="nav-burger-2" />
           <div className="nav-burger-3" />

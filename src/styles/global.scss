@@ -6,7 +6,7 @@ body {
   color: var.$accent-3-dark;
   font-family: "Mulish", sans-serif;
   font-optical-sizing: auto;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-style: normal;
   font-weight: 400;
   margin: 0;
@@ -105,9 +105,16 @@ ul {
   margin-top: 6rem;
 }
 
-.mobile{
-  &-show{
-    display:none;
+.logo {
+  background-image: url("../../public/assets/logo.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.mobile {
+  &-show {
+    display: none;
   }
 }
 
@@ -117,7 +124,6 @@ ul {
   h1 {
     font-size: 2.5rem;
   }
-
 }
 @media (max-width: var.$tablet) {
   // rules here apply to devices from 769px to 992px (inclusive)

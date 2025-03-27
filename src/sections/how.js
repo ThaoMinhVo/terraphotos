@@ -3,7 +3,7 @@ import "../styles/how.scss";
 
 function how() {
   return (
-    <div className="container-outer column section-margin how-bg">
+    <div id="how" className="container-outer column section-margin how-bg">
       <div className="container column center how">
         <h2>how to start</h2>
         <div className="how-grid">

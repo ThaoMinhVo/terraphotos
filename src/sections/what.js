@@ -3,7 +3,7 @@ import "../styles/what.scss";
 
 function what() {
   return (
-    <div className="container-outer">
+    <div id="what" className="container-outer">
       <div className="container column section-margin what">
         <h2>what I offer :</h2>
         <div className="what-grid">

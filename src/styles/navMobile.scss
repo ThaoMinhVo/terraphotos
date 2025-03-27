@@ -1,0 +1,60 @@
+@use "../styles/_variables.scss" as var;
+@import "../styles/_mixin.scss";
+
+.navMobile{
+  background-color: var.$base;
+  box-sizing: border-box;
+  height: 100vh;
+  padding: 3rem;
+  position: absolute;
+  transition: transform 0.5s;
+  width: 100vw;
+  &-close{
+    transform: translateX(100%);
+  }
+  &-x{
+    background-color: var.$accent-3-dark;
+    height: 2px;
+    width: 100%;
+    &-container{
+      aspect-ratio: 1 / 1;
+      background-color:transparent;
+      padding: 0;
+      position: absolute;
+      right: 3rem;
+      top: 3rem;
+      width: 2rem;
+    }
+    &-1{
+      transform: rotate(45deg);
+    }
+    &-2{
+      transform: translateY(-2px) rotate(-45deg);
+    }
+  }
+
+  &-logo{
+    aspect-ratio: 1 / 1;
+    margin-bottom: 10vh;
+    margin-top: 2rem;
+    width: 80px;
+  }
+
+  &-links{
+    margin-bottom: 5vh;
+    &-container{
+      @include flexbox();
+      flex-direction: column;
+      height: 100%;
+      align-items: center;
+    }
+  }
+
+  &-socials{
+    &-container{
+      @include flexbox();
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
+}

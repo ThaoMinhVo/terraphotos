@@ -6,7 +6,7 @@
         align-items: center;
         justify-content: space-between;
         margin-bottom: 1rem;
-        margin-top: 3rem;
+        margin-top: 2rem;
     }
     &-name {
         color: var.$accent-3;
@@ -31,6 +31,7 @@
         }
     }
     &-burger {
+        background-color: transparent;
         display: none;
         flex-direction: column;
         justify-content: space-between;
