@@ -24,6 +24,7 @@ const Contact = () => {
         },
         (error) => {
           console.log(error.text);
+          navigate("/oops");
         }
       );
   };
@@ -35,7 +36,7 @@ const Contact = () => {
           <h1>Let’s Chat & Plan Your Perfect Shoot!</h1>
           <p>
             I’d love to hear from you! Whether you’re ready to book or just have
-            a few questions, fill out the form below, and I’ll be in touch soon.
+            a few questions, complete the form, and I’ll be in touch soon.
             Let’s create something beautiful together!
           </p>
         </div>
