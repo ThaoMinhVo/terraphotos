@@ -110,6 +110,14 @@
 
 @media (max-width: var.$mobile) {
   // rules here apply to devices from 501px to 768px (inclusive)
+  .thanks {
+    &-bg {
+      padding: 1rem;
+    }
+    &-right {
+      padding: 2rem;
+    }
+  }
 }
 
 @media (max-width: var.$mobileXS) {
