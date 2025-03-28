@@ -86,16 +86,29 @@
 }
 
 .backToTop {
+  @include flexbox();
+  flex-direction: column;
+  align-items: center;
   background-color: var.$base-dark;
   border-radius: 200px 200px 0 0;
   bottom: 0;
-  padding: 3rem 2.5rem 0 2.5rem;
+  padding: 2rem 3rem 0 3rem;
   position: absolute;
   right: 0px;
 
   & > p {
     font-family: "Homemade Apple", cursive;
     margin: 0;
+  }
+
+  &-arrow {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("../../public/assets/icons/arrow-up.png");
+    height: 25px;
+    margin-bottom: 0.5rem;
+    width: 25px;
   }
 }
 
@@ -114,7 +127,7 @@
   }
 
   .backToTop {
-    padding: 2rem 1rem 0rem 1rem;
+    padding: 1rem 2rem 0rem 2rem;
     font-size: 1.25rem;
     right: 2rem;
   }
@@ -160,7 +173,7 @@
 
       & > p {
         font-family: "Homemade Apple", cursive;
-        margin: 0;
+        margin: 0 1.5rem;
       }
 
       &-bg {
@@ -214,6 +227,10 @@
     height: 1.5rem;
     min-width: 1.5rem;
     width: 1.5rem;
+  }
+
+  .backToTop{
+    display: none;
   }
 }
 

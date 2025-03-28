@@ -58,7 +58,7 @@ function footer() {
             how
           </HashLink>
           <div className="footer-links-divider" />
-          <a className="footer-links" href="/">
+          <a className="footer-links" href="/contact">
             contact
           </a>
         </div>
@@ -66,7 +66,7 @@ function footer() {
       <div className="container-outer footer-rights-bg">
         <div className="container footer-rights">
           <p className="legal">© TERRA VO PHOTOS 2025 | ALL RIGHTS RESERVED </p>
-          <HashLink to="#top" className="backToTop mobile-hide" smooth>
+          <HashLink to="#top" className="backToTop" smooth>
             <div className="backToTop-arrow"></div>
             <p>back to top</p>
           </HashLink>
@@ -78,9 +78,9 @@ function footer() {
           className="container center backToTop-mobile"
           smooth
         >
-          <div className="backToTop-mobile-arrow" />
+          <div className="backToTop-arrow" />
           <p>back to top</p>
-          <div className="backToTop-mobile-arrow" />
+          <div className="backToTop-arrow" />
         </HashLink>
       </div>
     </div>
