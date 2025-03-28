@@ -1,0 +1,123 @@
+@use "../styles/_variables.scss" as var;
+@import "../styles/_mixin.scss";
+
+.contact {
+  @include flexbox();
+  justify-content: center;
+  &-bg {
+    background-image: url("../../public/assets/prints/contact-bg.jpg");
+    background-position: center;
+    background-size: cover;
+    box-sizing: border-box;
+    padding: 3rem 0;
+  }
+  &-left {
+    background-color: rgba(216, 197, 182, 0.8);
+    border-radius: 0 0 0 500px;
+    box-sizing: border-box;
+    flex: 1;
+    margin-right: 3rem;
+    padding: 4rem 4rem 4rem 6rem;
+    max-width: 40%;
+  }
+  &-right {
+    background-color: var.$base-dark;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 2rem;
+    width: 40%;
+  }
+  &-form {
+    @include flexbox();
+    flex-direction: column;
+  }
+
+  &-field {
+    background-color: var.$base;
+    border: none;
+    border-radius: 10px;
+    color: var.$accent-3-dark;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+  }
+  &-submit {
+    border-radius: 10px;
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+}
+
+label {
+  font-size: 1rem;
+  color: var.$accent-3;
+  margin-bottom: 0.5rem;
+}
+
+textarea {
+  resize: vertical;
+}
+
+// all rules outside of @media queries apply to devices 101px and above
+@media (max-width: var.$desktop) {
+  // rules here apply to devices from 993px to 1400px (inclusive)
+}
+@media (max-width: var.$tablet) {
+  // rules here apply to devices from 769px to 992px (inclusive)
+  .contact {
+    &-bg {
+      padding: 3rem 0;
+    }
+    &-left {
+      margin-right: 2rem;
+      padding: 2rem 2rem 2rem 3rem;
+      max-width: 45%;
+      & h1 {
+        font-size: 2rem;
+      }
+    }
+    &-right {
+      width: 55%;
+    }
+  }
+}
+
+@media (max-width: var.$mobile) {
+  // rules here apply to devices from 501px to 768px (inclusive)
+  .contact {
+    flex-direction: column;
+    align-items: center;
+    &-bg {
+      padding: 3rem 2rem;
+    }
+    &-left {
+      border-radius: 0;
+      margin-right: 0;
+      padding: 2rem 4rem;
+      text-align: center;
+      max-width: 100%;
+      & h1 {
+        font-size: 2rem;
+      }
+    }
+    &-right {
+      border-radius: 0;
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: var.$mobileXS) {
+  // rules here apply to devices from 0px to 500px (inclusive)
+  .contact {
+    &-bg {
+      padding: 2rem 1rem;
+    }
+    &-left {
+      padding: 2rem 2.5rem;
+      & h1 {
+        font-size: 2rem;
+      }
+    }
+  }
+}

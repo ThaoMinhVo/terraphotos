@@ -1,0 +1,117 @@
+@use "../styles/_variables.scss" as var;
+@import "../styles/_mixin.scss";
+
+.thanks {
+  @include flexbox();
+  background-color: rgba(243, 238, 234, 0.4);
+  box-sizing: border-box;
+  justify-content: center;
+  &-bg {
+    box-sizing: border-box;
+    background-color: var.$accent-1;
+    padding: 5rem;
+  }
+  &-left {
+    background-image: url("../../public/assets/prints/me-thanks.jpg");
+    background-size: cover;
+    background-position: center bottom;
+    width: 35%;
+    min-height: 550px;
+  }
+  &-right {
+    box-sizing: border-box;
+    padding: 5rem 7rem;
+    width: 65%;
+
+    & h1{
+      font-family: "Homemade Apple", cursive;
+    }
+
+    & p {
+      font-size: 1rem
+    }
+  }
+  &-link {
+    @include flexbox();
+    align-items: center;
+    border: 1px solid var.$accent-3-dark;
+    border-radius: 50px;
+    margin: 2rem 0;
+    padding: 0rem 2rem;
+    width: fit-content;
+    & p {
+      margin: 0.75rem 0;
+    }
+    &-icon {
+      background-image: url("../../public/assets/icons/instagram.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      height: 25px;
+      margin-right: 1rem;
+      width: 25px;
+    }
+  }
+}
+
+// all rules outside of @media queries apply to devices 1401px and above
+@media (max-width: var.$desktop) {
+  // rules here apply to devices from 993px to 1400px (inclusive)
+  .thanks {
+    padding: 0;
+    &-left {
+      min-height: 450px;
+    }
+    &-right {
+      padding: 3rem 4rem;
+    }
+  }
+}
+@media (max-width: var.$tablet) {
+  // rules here apply to devices from 769px to 992px (inclusive)
+  .thanks {
+    flex-direction: column-reverse;
+    &-bg {
+      padding: 2rem;
+    }
+    &-left {
+      aspect-ratio: 1 / 1;
+      min-height: unset;
+      width: 100%;
+    }
+    &-right {
+      @include flexbox();
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 3rem;
+      text-align: center;
+      justify-content: center;
+      width: 100%;
+      & h1 {
+        font-size: 1.75rem;
+      }
+      & p {
+        font-size: 0.8rem
+      }
+    }
+
+    &-link{
+      margin: 0.5rem 0;
+      &-icon {
+        height: 20px;
+        margin-right: 0.5rem;
+        width: 20px;
+      }
+      & p {
+        margin: 0.5rem 0;
+      }
+    }
+  }
+}
+
+@media (max-width: var.$mobile) {
+  // rules here apply to devices from 501px to 768px (inclusive)
+}
+
+@media (max-width: var.$mobileXS) {
+  // rules here apply to devices from 0px to 500px (inclusive)
+}

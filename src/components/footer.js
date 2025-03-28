@@ -42,18 +42,22 @@ function footer() {
       </div>
       <div className="container-outer footer-links-bg">
         <div className="container footer-links-container">
-          <a className="footer-links" href="#who">
+          <HashLink className="footer-links" to="/" smooth>
+            home
+          </HashLink>
+          <div className="footer-links-divider" />
+          <HashLink className="footer-links" to="/#who" smooth>
             who
-          </a>
-          <div className="footer-links-divider"></div>
-          <a className="footer-links" href="#what">
+          </HashLink>
+          <div className="footer-links-divider" />
+          <HashLink className="footer-links" to="/#what" smooth>
             what
-          </a>
-          <div className="footer-links-divider"></div>
-          <a className="footer-links" href="#how">
+          </HashLink>
+          <div className="footer-links-divider" />
+          <HashLink className="footer-links" to="/#how" smooth>
             how
-          </a>
-          <div className="footer-links-divider"></div>
+          </HashLink>
+          <div className="footer-links-divider" />
           <a className="footer-links" href="/">
             contact
           </a>
@@ -69,7 +73,11 @@ function footer() {
         </div>
       </div>
       <div className="container-outer mobile-show backToTop-mobile-bg">
-        <HashLink to="#top" className="container center backToTop-mobile" smooth>
+        <HashLink
+          to="#top"
+          className="container center backToTop-mobile"
+          smooth
+        >
           <div className="backToTop-mobile-arrow" />
           <p>back to top</p>
           <div className="backToTop-mobile-arrow" />

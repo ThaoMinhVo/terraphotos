@@ -4,6 +4,7 @@ import Nav from "./components/nav";
 import Footer from "./components/footer";
 import Home from "./pages";
 import Contact from "./pages/contact";
+import Thanks from "./pages/thanks";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/thanks" element={<Thanks />} />
       </Routes>
       <Footer />
     </Router>

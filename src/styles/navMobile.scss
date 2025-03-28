@@ -1,61 +1,81 @@
 @use "../styles/_variables.scss" as var;
 @import "../styles/_mixin.scss";
 
-.navMobile{
+.navMobile {
+  display: none;
   background-color: var.$base;
   box-sizing: border-box;
   height: 100vh;
   padding: 3rem;
-  position: absolute;
+  position: fixed;
   transition: transform 0.5s;
   width: 100vw;
   z-index: 100;
-  &-close{
+  overflow-y: scroll;
+  &-close {
     transform: translateX(100%);
   }
-  &-x{
+  &-x {
     background-color: var.$accent-3-dark;
     height: 2px;
     width: 100%;
-    &-container{
+    &-container {
       aspect-ratio: 1 / 1;
-      background-color:transparent;
+      background-color: transparent;
       padding: 0;
       position: absolute;
       right: 3rem;
       top: 3rem;
       width: 2rem;
     }
-    &-1{
+    &-1 {
       transform: rotate(45deg);
     }
-    &-2{
+    &-2 {
       transform: translateY(-2px) rotate(-45deg);
     }
   }
 
-  &-logo{
+  &-logo {
     aspect-ratio: 1 / 1;
-    margin-bottom: 10vh;
-    margin-top: 2rem;
+    margin-bottom: 5vh;
+    margin-top: 1.75rem;
     width: 80px;
   }
 
-  &-links{
+  &-links {
     margin-bottom: 5vh;
-    &-container{
+    font-size: 2rem;
+    &-container {
       @include flexbox();
       flex-direction: column;
-      height: 100%;
       align-items: center;
     }
-  }
-
-  &-socials{
-    &-container{
-      @include flexbox();
-      justify-content: space-between;
-      width: 100%;
+    &-social {
+      border: 1px solid var.$accent-1-dark;
+      border-radius: 50px;
+      font-size: 1rem;
+      padding: 0.5rem;
+      text-align: center;
+      width: 150px;
+    }
+    &-contact {
+      /*background-color: var.$accent-1-dark;
+      border-radius: 50px;
+      padding: 0.5rem;
+      text-align: center;
+      width: 100px;*/
     }
   }
+}
+
+@media (max-width: var.$mobile) {
+  // rules here apply to devices from 501px to 768px (inclusive)
+  .navMobile {
+    display: flex;
+  }
+}
+
+@media (max-width: var.$mobileXS) {
+  // rules here apply to devices from 0px to 500px (inclusive)
 }
