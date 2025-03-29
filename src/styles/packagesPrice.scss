@@ -1,0 +1,145 @@
+@use "../styles/_variables.scss" as var;
+@import "../styles/_mixin.scss";
+
+$package-width-desktop: 28%;
+$package-width-tablet: 70%;
+$package-width-mobile: 90%;
+
+$package-padding-desktop: 2rem;
+
+.price {
+  &-bg {
+    background-color: var.$accent-2;
+    padding: 3rem 0;
+  }
+  &-disclaimer {
+    font-size: 1.1rem;
+    text-align: center;
+    width: 65vw;
+  }
+}
+
+.package {
+  @include flexbox();
+  align-items: stretch;
+  position: relative;
+  width: $package-width-desktop;
+  &-container {
+    @include flexbox();
+    box-sizing: border-box;
+    justify-content: space-evenly;
+    margin-top: 2rem;
+    padding: 0 $package-padding-desktop $package-padding-desktop $package-padding-desktop;
+    width: 100%;
+  }
+  &-name {
+    @include flexbox();
+    box-sizing: border-box;
+    justify-content: space-evenly;
+    width: 100%;
+    & h4 {
+      background-color: var.$base;
+      box-sizing: border-box;
+      font-size: 1.6rem;
+      margin: 0;
+      padding: 1.2rem 0;
+      text-align: center;
+    }
+  }
+  &-detail {
+    background-color: var.$base;
+    padding-bottom: 2rem;
+    width: 100%;
+    & ul {
+      box-sizing: border-box;
+      padding: 0rem 2rem 0 4rem;
+      & li {
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+  &-price {
+    background-color: var.$accent-2-dark;
+    color: var.$white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0 -3% 0 -3%;
+    text-align: center;
+    padding: 1.5rem 0;
+  }
+}
+
+// all rules outside of @media queries apply to devices 1401px and above
+@media (max-width: var.$desktop) {
+  // rules here apply to devices from 993px to 1400px (inclusive)
+  .price {
+    &-disclaimer {
+      width: 70vw;
+    }
+  }
+
+  .package {
+    &-detail {
+      & ul {
+        padding: 0rem 1rem 0 3rem;
+        & li {
+          font-size: 1.15rem;
+        }
+      }
+    }
+  }
+}
+@media (max-width: var.$tablet) {
+  // rules here apply to devices from 769px to 992px (inclusive)
+  .price {
+    &-disclaimer {
+      font-size: 1rem;
+      width: 80vw;
+    }
+  }
+  .package {
+    &-detail {
+      & ul {
+        padding: 0rem 0rem 0 2rem;
+        & li {
+          font-size: 1rem;
+          margin-bottom: 0.25rem;
+        }
+      }
+    }
+    &-name {
+      & h4 {
+        font-size: 1.5rem;
+      }
+    }
+    &-price {
+      font-size: 1.3rem;
+      padding: 1rem 0;
+    }
+  }
+}
+
+@media (max-width: var.$mobile) {
+  // rules here apply to devices from 501px to 768px (inclusive)
+  .price {
+  }
+
+  .package {
+    margin-top: 2rem;
+    width: $package-width-tablet;
+    &-container {
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+}
+
+@media (max-width: var.$mobileXS) {
+  // rules here apply to devices from 0px to 500px (inclusive)
+  .package {
+    width: $package-width-mobile;
+    &-container {
+      padding:0 1rem 1rem 1rem;
+    }
+  }
+}

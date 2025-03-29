@@ -1,0 +1,49 @@
+@use "../styles/_variables.scss" as var;
+@import "../styles/_mixin.scss";
+
+.addOn {
+  &-bg{
+    background-color: var.$base-dark;
+    padding: 2rem 0;
+  }
+  & table, th, td {
+    border: 1px solid var.$accent-1-dark;;
+    border-collapse: collapse;
+    font-size: 1.1rem;
+  }
+}
+
+// all rules outside of @media queries apply to devices 1401px and above
+@media (max-width: var.$desktop) {
+  // rules here apply to devices from 993px to 1400px (inclusive)
+  .addOn {
+  }
+}
+@media (max-width: var.$tablet) {
+  // rules here apply to devices from 769px to 992px (inclusive)
+  .addOn {
+    & table, th, td {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media (max-width: var.$mobile) {
+  // rules here apply to devices from 501px to 768px (inclusive)
+  addOn {
+    & table, th, td {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+@media (max-width: var.$mobileXS) {
+  // rules here apply to devices from 0px to 500px (inclusive)
+  .addOn {
+    addOn {
+      & table, th, td {
+        font-size: 0.75rem;
+      }
+    }
+  }
+}

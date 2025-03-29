@@ -1,0 +1,108 @@
+@use "../styles/_variables.scss" as var;
+@import "../styles/_mixin.scss";
+
+.packages {
+  &-hero {
+    @include flexbox();
+    align-items: flex-end;
+    justify-content: flex-end;
+    overflow: hidden;
+    &-bg {
+      background-image: url("../../public/assets/prints/package-bg-lg.jpg");
+      background-size: cover;
+      background-position: center;
+      height: 65vh;
+      position: relative;
+      &:before {
+        background: rgb(216, 197, 182);
+        background: linear-gradient(
+          90deg,
+          rgba(216, 197, 182, 0) 40%,
+          rgba(216, 197, 182, 0.5956976540616247) 70%,
+          rgba(216, 197, 182, 1) 100%
+        );
+        content: "";
+        height: 100%;
+        position: absolute;
+        width: 100%;
+      }
+    }
+    & h1 {
+      max-width: 450px;
+      padding: 7rem;
+      text-align: right;
+      z-index: 1;
+    }
+  }
+}
+
+// all rules outside of @media queries apply to devices 1401px and above
+@media (max-width: var.$desktop) {
+  // rules here apply to devices from 993px to 1400px (inclusive)
+
+  .packages {
+    &-hero {
+      max-height: 450px;
+      & h1 {
+        padding: 2rem 3rem;
+      }
+    }
+  }
+}
+@media (max-width: var.$tablet) {
+  // rules here apply to devices from 769px to 992px (inclusive)
+  .packages {
+    &-hero {
+      &-bg {
+        max-height: 400px;
+        background-image: url("../../public/assets/prints/package-bg-md.jpg");
+      }
+    }
+  }
+}
+
+@media (max-width: var.$mobile) {
+  // rules here apply to devices from 501px to 768px (inclusive)
+  .packages {
+    &-hero {
+      &-bg {
+        background-image: url("../../public/assets/prints/package-bg-sm.jpg");
+        &:before {
+          background: linear-gradient(
+            90deg,
+            rgba(216, 197, 182, 0) 40%,
+            rgba(216, 197, 182, 0.5956976540616247) 70%,
+            rgba(216, 197, 182, 1) 100%
+          );
+        }
+      }
+
+      & h1 {
+        max-width: 200px;
+        padding: 3rem;
+      }
+    }
+  }
+}
+
+@media (max-width: var.$mobileXS) {
+  // rules here apply to devices from 0px to 500px (inclusive)
+  .packages {
+    &-hero {
+      &-bg{
+        background-image: url("../../public/assets/prints/package-bg-sm.jpg");
+        &:before {
+          background: linear-gradient(
+            90deg,
+            rgba(216, 197, 182, 0) 40%,
+            rgba(216, 197, 182, 0.5956976540616247) 70%,
+            rgba(216, 197, 182, 1) 100%
+          );
+        }
+      }
+      & h1 {
+        padding: 2rem;
+      }
+    }
+  }
+}
