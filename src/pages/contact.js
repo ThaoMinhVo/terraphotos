@@ -60,7 +60,7 @@ const Contact = () => {
             <label>Phone number</label>
             <input className="contact-field" type="tel" name="phone" />
             <label>Package</label>
-            <select className="contact-field" name="type">
+            <select className="contact-field" name="package">
               <option disabled selected value>
                 {" "}
                 -- select an option --{" "}
