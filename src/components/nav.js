@@ -19,15 +19,12 @@ function nav() {
           <a className="nav-links" href="/">
             home
           </a>
-          <HashLink className="nav-links" to="/#who" smooth>
-            who
-          </HashLink>
-          <HashLink className="nav-links" to="/#what" smooth>
-            what
-          </HashLink>
           <HashLink className="nav-links" to="/#how" smooth>
-            how
+            start
           </HashLink>
+          <a className="nav-links" href="/packages">
+            packages
+          </a>
           <a className="nav-links nav-links-contact" href="/contact">
             contact
           </a>

@@ -8,12 +8,12 @@ function how() {
         <h2>how to start</h2>
         <div className="how-grid">
           <div className="how-grid-item">
-            <p className="how-grid-item-detail">Contact me to receive package options and work out availability.</p>
+            <p className="how-grid-item-detail"><a className="inline" href="/contact">Contact</a> me with the <a className="inline" href="/packages">package</a> of your choice and available dates, and we’ll get the booking process started.</p>
             <h3 className="how-grid-item-name">select</h3>
             <div className="how-number how-number-1">1</div>
           </div>
           <div className="how-grid-item">
-            <p className="how-grid-item-detail">Lock in your date with a signed contract and paid retainer.</p>
+            <p className="how-grid-item-detail">Lock in your date with a signed contract and a 50% retainer (non-refundable). Once paid your date is offically set!</p>
             <h3 className="how-grid-item-name">secure</h3>
             <div className="how-number how-number-2">2</div>
           </div>

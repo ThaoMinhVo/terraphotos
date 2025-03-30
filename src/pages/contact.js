@@ -59,6 +59,16 @@ const Contact = () => {
             />
             <label>Phone number</label>
             <input className="contact-field" type="tel" name="phone" />
+            <label>Package</label>
+            <select className="contact-field" name="type">
+              <option disabled selected value>
+                {" "}
+                -- select an option --{" "}
+              </option>
+              <option value="30 minute session">30 minute session</option>
+              <option value="1 hour session">1 hour session</option>
+              <option value="1.5 hour session">1.5 hour session</option>
+            </select>
             <label>Type of shoot*</label>
             <select className="contact-field" name="type" required>
               <option disabled selected value>
@@ -83,7 +93,7 @@ const Contact = () => {
             <label>Desired date & location*</label>
             <textarea className="contact-field" name="date" required />
             <label>Extra details</label>
-            <textarea className="contact-field" name="details" />
+            <textarea className="contact-field" name="details" placeholder="Add-ons, special requests, custom packages, etc..."/>
             <input
               type="hidden"
               name="_next"
