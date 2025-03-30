@@ -42,7 +42,9 @@
 
   .packages {
     &-hero {
-      max-height: 450px;
+      &-bg {
+        max-height: 450px;
+      }
       & h1 {
         padding: 2rem 3rem;
       }
@@ -89,7 +91,7 @@
   // rules here apply to devices from 0px to 500px (inclusive)
   .packages {
     &-hero {
-      &-bg{
+      &-bg {
         background-image: url("../../public/assets/prints/package-bg-sm.jpg");
         &:before {
           background: linear-gradient(
