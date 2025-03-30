@@ -42,21 +42,17 @@ function footer() {
       </div>
       <div className="container-outer footer-links-bg">
         <div className="container footer-links-container">
-          <HashLink className="footer-links" to="/" smooth>
+          <a className="footer-links" href="/">
             home
-          </HashLink>
-          <div className="footer-links-divider" />
-          <HashLink className="footer-links" to="/#who" smooth>
-            who
-          </HashLink>
-          <div className="footer-links-divider" />
-          <HashLink className="footer-links" to="/#what" smooth>
-            what
-          </HashLink>
+          </a>
           <div className="footer-links-divider" />
           <HashLink className="footer-links" to="/#how" smooth>
-            how
+            start
           </HashLink>
+          <div className="footer-links-divider" />
+          <a className="footer-links" href="/packages">
+            packages
+          </a>
           <div className="footer-links-divider" />
           <a className="footer-links" href="/contact">
             contact

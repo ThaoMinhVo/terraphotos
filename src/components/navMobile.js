@@ -17,46 +17,28 @@ function navMobile() {
       <div className="container column navMobile-container">
         <div className="logo navMobile-logo"></div>
         <div className="navMobile-links-container">
-          <HashLink
-            onClick={closeNav}
-            className="navMobile-links"
-            to="/"
-            smooth
-          >
+          <a onClick={closeNav} className="navMobile-links" href="/">
             home
-          </HashLink>
-          <HashLink
-            onClick={closeNav}
-            className="navMobile-links"
-            to="/#who"
-            smooth
-          >
-            who
-          </HashLink>
-          <HashLink
-            onClick={closeNav}
-            className="navMobile-links"
-            to="/#what"
-            smooth
-          >
-            what
-          </HashLink>
+          </a>
           <HashLink
             onClick={closeNav}
             className="navMobile-links"
             to="/#how"
             smooth
           >
-            how
+            start
           </HashLink>
-          <HashLink
+          <a onClick={closeNav} className="navMobile-links" href="/packages">
+            packages
+          </a>
+          <a
             onClick={closeNav}
             className="navMobile-links"
             to="/contact"
             smooth
           >
             contact
-          </HashLink>
+          </a>
         </div>
         <a
           href="mailto:terravophotos@gmail.com"
