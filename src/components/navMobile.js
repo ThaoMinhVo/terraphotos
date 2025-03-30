@@ -34,7 +34,7 @@ function navMobile() {
           <a
             onClick={closeNav}
             className="navMobile-links"
-            to="/contact"
+            href="/contact"
             smooth
           >
             contact
