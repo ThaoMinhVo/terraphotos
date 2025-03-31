@@ -35,12 +35,17 @@ const packagesAddOn = () => {
             </tr>
             <tr>
               <td>Additional Location</td>
-              <td>Within 10 miles</td>
+              <td>Within 10 miles. Would not recommend for 30 minute sessions.</td>
               <td>$50</td>
             </tr>
             <tr>
               <td>Destination Shoot</td>
-              <td>Travel fees will apply if location is outside of Orange County.</td>
+              <td>Travel fees may apply and will vary for locations over 40 minutes away.</td>
+              <td>varies</td>
+            </tr>
+            <tr>
+              <td>Photography Permits</td>
+              <td>You are required to cover any photography permit fees if your chosen location requires one.</td>
               <td>varies</td>
             </tr>
           </tbody>

@@ -7,7 +7,7 @@ function packagesHero() {
       <div className="container-full center column price">
         <h2>Packages</h2>
         <p className="price-disclaimer">
-        Pricing is subject to change at any time without notice. Rates may vary, particularly during peak seasons, holidays, or for special requests. Your session price is locked in once the deposit is paid. For the latest pricing details, please reach out directly.
+        Pricing is subject to change at any time without notice. Rates may vary, particularly during peak seasons, holidays, or for special requests. Your session price is locked in once your retainer is paid. For the latest pricing details, please reach out directly.
         </p>
 
         <div className="package-container">
