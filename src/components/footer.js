@@ -47,7 +47,7 @@ function footer() {
           </a>
           <div className="footer-links-divider" />
           <HashLink className="footer-links" to="/#how" smooth>
-            start
+            how to start
           </HashLink>
           <div className="footer-links-divider" />
           <a className="footer-links" href="/packages">

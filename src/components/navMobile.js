@@ -26,7 +26,7 @@ function navMobile() {
             to="/#how"
             smooth
           >
-            start
+            how to start
           </HashLink>
           <a onClick={closeNav} className="navMobile-links" href="/packages">
             packages

@@ -20,7 +20,7 @@ function nav() {
             home
           </a>
           <HashLink className="nav-links" to="/#how" smooth>
-            start
+            how to start
           </HashLink>
           <a className="nav-links" href="/packages">
             packages
