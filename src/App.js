@@ -7,6 +7,7 @@ import Contact from "./pages/contact";
 import Packages from "./pages/packages";
 import Thanks from "./pages/thanks";
 import Opps from "./pages/oops";
+import Questionnaire from "./pages/questionnaire";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/packages" element={<Packages />} />
         <Route path="/thanks" element={<Thanks />} />
         <Route path="/oops" element={<Opps />} />
+        <Route path="/questionnaire" element={<Questionnaire />} />
       </Routes>
       <Footer />
     </Router>
