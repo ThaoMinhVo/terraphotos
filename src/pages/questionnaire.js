@@ -20,11 +20,11 @@ const Questionnaire = () => {
       .then(
         (result) => {
           console.log(result.text);
-          navigate("/thanks");
+          navigate("/questionnaire/thanks");
         },
         (error) => {
           console.log(error.text);
-          navigate("/oops");
+          navigate("/questionnaire/oops");
         }
       );
   };
@@ -120,7 +120,7 @@ const Questionnaire = () => {
             <input
               type="hidden"
               name="_next"
-              value="https://terravophotos.com/thanks"
+              value="https://terravophotos.com/questionnaire/thanks"
             ></input>
             <button className="contact-submit" type="submit" value="Send">
               Submit

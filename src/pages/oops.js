@@ -7,7 +7,7 @@ const Thanks = () => {
       <div className="container container-full oops">
         <h1>Oh no!</h1>
         <p>
-          My contact form isn't working at the moment. Please reach out to me
+          My form isn't working at the moment. Please reach out to me
           directly via email!
         </p>
         <a href="mailto:terravophotos@gmail.com" className="footer-social-link thanks-link">

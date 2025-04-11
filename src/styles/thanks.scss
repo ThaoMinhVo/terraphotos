@@ -17,18 +17,23 @@
     background-position: center bottom;
     width: 35%;
     min-height: 550px;
+
+    &-q {
+      background-image: url("../../public/assets/prints/questionnaire-thanks.jpg");
+    }
   }
   &-right {
     box-sizing: border-box;
     padding: 5rem 7rem;
     width: 65%;
 
-    & h1{
+    & h1 {
       font-family: "Homemade Apple", cursive;
+      
     }
 
     & p {
-      font-size: 1rem
+      font-size: 1rem;
     }
   }
   &-link {
@@ -90,11 +95,11 @@
         font-size: 1.75rem;
       }
       & p {
-        font-size: 0.8rem
+        font-size: 0.8rem;
       }
     }
 
-    &-link{
+    &-link {
       margin: 0.5rem 0;
       &-icon {
         height: 20px;
