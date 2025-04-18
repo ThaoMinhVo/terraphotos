@@ -29,7 +29,7 @@ function packagesHero() {
               <div className="package-name">
                 <h4>1-hour</h4>
               </div>
-              <p className="package-price">$375</p>
+              <p className="package-price">$350</p>
               <ul>
                 <li>25 edited images</li>
                 <li>up to 2 outfits</li>
@@ -42,7 +42,7 @@ function packagesHero() {
               <div className="package-name">
                 <h4>1.5-hour</h4>
               </div>
-              <p className="package-price">$500</p>
+              <p className="package-price">$450</p>
               <ul>
                 <li>50 edited images</li>
                 <li>up to 3 outfits</li>
