@@ -18,7 +18,7 @@ function packagesHero() {
               </div>
               <p className="package-price">$250</p>
               <ul>
-                <li>13 edited images</li>
+                <li>15 edited images</li>
                 <li>1 outfit</li>
                 <li>1 location</li>
               </ul>
@@ -31,7 +31,7 @@ function packagesHero() {
               </div>
               <p className="package-price">$350</p>
               <ul>
-                <li>25 edited images</li>
+                <li>30 edited images</li>
                 <li>up to 2 outfits</li>
                 <li>1 location</li>
               </ul>
