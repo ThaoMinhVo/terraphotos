@@ -8,7 +8,7 @@
     justify-content: flex-end;
     overflow: hidden;
     &-bg {
-      background-image: url("../../public/assets/prints/package-bg-lg.jpg");
+      background-image: url("../../public/assets/prints/packagebg-lg.jpg");
       background-size: cover;
       background-position: center;
       height: 65vh;
@@ -57,7 +57,7 @@
     &-hero {
       &-bg {
         max-height: 400px;
-        background-image: url("../../public/assets/prints/package-bg-md.jpg");
+        background-image: url("../../public/assets/prints/packagebg-md.jpg");
       }
     }
   }
@@ -68,7 +68,7 @@
   .packages {
     &-hero {
       &-bg {
-        background-image: url("../../public/assets/prints/package-bg-sm.jpg");
+        background-image: url("../../public/assets/prints/packagebg-sm.jpg");
         &:before {
           background: linear-gradient(
             90deg,
@@ -91,17 +91,6 @@
   // rules here apply to devices from 0px to 500px (inclusive)
   .packages {
     &-hero {
-      &-bg {
-        background-image: url("../../public/assets/prints/package-bg-sm.jpg");
-        &:before {
-          background: linear-gradient(
-            90deg,
-            rgba(216, 197, 182, 0) 40%,
-            rgba(216, 197, 182, 0.5956976540616247) 70%,
-            rgba(216, 197, 182, 1) 100%
-          );
-        }
-      }
       & h1 {
         padding: 2rem;
       }
